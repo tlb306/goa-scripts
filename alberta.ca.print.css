@@ -1,0 +1,151 @@
+/*
+
+- emergency banners (icon should probably print)
+- callout borders (icon should probably print if possible ...)
+- what do cards look like on print
+
+
+*/
+
+/**********************************************************************
+* imports
+* 
+***/
+
+
+
+body {
+	font-family: helvetica, serif;
+}
+
+.toc,
+.skip-links,
+.search,
+.language-options,
+.section-footer,
+.back-to-top {
+	display: none;
+}
+
+
+div.notifications {
+	margin-bottom: 20px;
+}
+div.notifications ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+div.notifications li {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+div.notifications a {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	border: 10px solid #36424a;
+	padding: 15px 15px 16px 55px;
+
+}
+
+div.notifications li.emergency a {
+	border: 10px solid #d40072;
+}
+div.notifications li.important a {
+	border: 10px solid #ff7900;
+}
+div.notifications li.info a {
+	border: 10px solid #00aad2;
+}
+div.notifications li.event a {
+	border: 10px solid #77b800;
+}
+
+
+
+
+
+
+div.callout-emergency,
+div.callout-important,
+div.callout-info,
+div.callout-event {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	margin: 30px 0px 15px 0px;
+	padding: 14px 15px 16px 25px;	
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+	font-size: 1.1em;
+	font-style: italic;
+}
+div.callout-emergency {
+	border-left: 10px solid #d40072;
+}
+div.callout-important {
+	border-left: 10px solid #ff7900;
+}
+div.callout-info {
+	border-left: 10px solid #00aad2;
+}
+div.callout-event {
+	border-left: 10px solid #77b800;
+}
+
+
+li.card {
+	display: none;
+}
+div.cards-primary:before,
+div.cards-secondary:before,
+div.cards-tertiary:before {
+	display: inline-block;
+	font-style: italic;
+	content: 'Cards are not displayed in print mode';
+}
+
+
+
+
+div.section-breadcrumb {
+	padding-top: 20px;
+}
+div.section-breadcrumb ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+div.section-breadcrumb li {
+	display: inline-block;
+	position: relative;
+	margin-top: 5px;
+	margin-right: 1em;
+}
+div.section-breadcrumb li:after {
+	position: absolute;
+	content: '>';
+	top: 0px;
+	left: 100%;
+	margin-left: 5px;
+}
+div.section-breadcrumb a {
+	display: block;
+}
+div.section-breadcrumb li:nth-of-type(n+2) a {
+	font-size: 1.1em;
+}
+div.section-breadcrumb li:nth-of-type(4) a {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+
+
+
+.section-header {
+	padding-bottom: 20px;
+	border-bottom: 8px solid #77b800;
+}
